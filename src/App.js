@@ -37,7 +37,7 @@ function App() {
     <div>
       <div className={classes.logoContainer}>
         <img
-          src="https://ichef.bbci.co.uk/news/1024/branded_news/E58C/production/_111846785_gettyimages-920743046.jpg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-mdGN5s8oseLHmPyP9HqXw6FdYF8Aa0-b6Q&usqp=CAU"
           className={classes.robotLogo}
           alt="robotLogo"
         />
