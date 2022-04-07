@@ -5,7 +5,10 @@ html {
 }
 body {
   margin: 0;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-image: linear-gradient(to right bottom, #ff3366, #ba265d);
 }
 html {
   scroll-behavior: smooth;

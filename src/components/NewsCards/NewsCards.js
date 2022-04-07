@@ -2,12 +2,13 @@ import React from "react";
 import NewsCard from "../NewsCard/NewsCard";
 import { Grid, Grow, Typography } from "@material-ui/core";
 import useStyles from "./styles";
+
 const infoCards = [
   { color: "#34b4eb", title: "Latest News", text: "Give me the latest news" },
   {
     color: "#1565c0",
     title: "News by Categories",
-    info: "Business, Entertainment, General, Health, Science, Sports, Technology",
+    info: "Business,  General, Health, Science, Sports, Technology",
     text: "Give me the latest Technology news",
   },
   {
@@ -23,7 +24,7 @@ const infoCards = [
     text: "Give me the news from CNN",
   },
 ];
-const NewsCards = ({ articles }) => {
+const NewsCards = ({ articles, activeArticle }) => {
   const classes = useStyles();
   if (!articles.length) {
     return (
@@ -36,6 +37,7 @@ const NewsCards = ({ articles }) => {
         >
           {infoCards.map((infoCard) => (
             <Grid
+              key={infoCard.title}
               item
               xs={12}
               sm={6}
@@ -75,8 +77,8 @@ const NewsCards = ({ articles }) => {
         spacing={3}
       >
         {articles.map((article, i) => (
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <NewsCard article={article} i={i} />
+          <Grid key={article.title} item xs={12} sm={6} md={4} lg={3}>
+            <NewsCard activeArticle={activeArticle} article={article} i={i} />
           </Grid>
         ))}
       </Grid>
